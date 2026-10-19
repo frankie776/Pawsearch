@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f6f3"><meta name="description" content="PawSearch — a clean little place to search the web.">
+<title>PawSearch — find your thing</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="PawSearch home"><span class="logo">✳</span><span>Paw<span>Search</span></span></a>
+  <nav class="top-links" aria-label="Quick links"><a href="https://duckduckgo.com/" target="_blank" rel="noopener">DuckDuckGo ↗</a><a href="https://wikipedia.org/" target="_blank" rel="noopener">Wikipedia ↗</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="dot"></span> YOUR LITTLE WINDOW TO THE WEB</div>
+    <div class="mascot" aria-hidden="true">ฅ^•ﻌ•^ฅ</div>
+    <h1>Find your <span>thing.</span></h1>
+    <p class="subtitle">A calmer corner of the internet. What are we looking for today?</p>
+    <form id="searchForm" class="search-box" role="search">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="query" name="q" type="search" placeholder="Search anything..." autocomplete="off" aria-label="Search the web" required>
+      <button type="submit" aria-label="Search">Search <span>↗</span></button>
+    </form>
+    <div class="search-options" aria-label="Search type">
+      <button class="type-chip active" type="button" data-type="web">⌕ <span>Web</span></button>
+      <button class="type-chip" type="button" data-type="images">▧ <span>Images</span></button>
+      <button class="type-chip" type="button" data-type="videos">▷ <span>Videos</span></button>
+      <button class="type-chip" type="button" data-type="news">◷ <span>News</span></button>
+    </div>
+    <p class="hint">Tip: press <kbd>/</kbd> to jump to search</p>
+  </section>
+
+  <section class="quick-section">
+    <div class="section-head"><div><div class="eyebrow">QUICK JUMPS</div><h2>Somewhere to start<span>.</span></h2></div><span class="small-note">Pick a shortcut</span></div>
+    <div class="shortcut-grid">
+      <a class="shortcut" href="https://www.wikipedia.org/" target="_blank" rel="noopener"><span class="shortcut-icon lilac">W</span><span><b>Wikipedia</b><small>Learn something new</small></span><span class="arrow">↗</span></a>
+      <a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="shortcut-icon coral">▷</span><span><b>YouTube</b><small>Watch and explore</small></span><span class="arrow">↗</span></a>
+      <a class="shortcut" href="https://www.reddit.com/" target="_blank" rel="noopener"><span class="shortcut-icon mint">r/</span><span><b>Reddit</b><small>Find communities</small></span><span class="arrow">↗</span></a>
+      <a class="shortcut" href="https://itch.io/" target="_blank" rel="noopener"><span class="shortcut-icon yellow">✿</span><span><b>itch.io</b><small>Discover indie games</small></span><span class="arrow">↗</span></a>
+    </div>
+  </section>
+  <section class="recent-section" id="recentSection" hidden>
+    <div class="section-head"><div><div class="eyebrow">ON THIS DEVICE</div><h2>Recent searches<span>.</span></h2></div><button id="clearRecent" class="text-button" type="button">Clear history</button></div>
+    <div id="recentList" class="recent-list"></div>
+  </section>
+  <footer><a class="brand footer-brand" href="./"><span class="logo">✳</span><span>Paw<span>Search</span></span></a><p>Simple search, softer vibes. <span>Made with a tiny paw.</span></p></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
